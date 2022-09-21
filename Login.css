@@ -1,0 +1,82 @@
+
+#header1
+{
+	color: white;
+	background: #1E90FF;
+	font-family: Helvetica;
+	font-size: 0.5em;
+	padding-left: 20px;
+}
+
+#section1
+{
+	background: #DCDCDC;
+	font-family: Helvetica;
+	font-size: 0.8em;
+}
+
+#footer
+{
+	color: white;
+	background: #1E90FF;
+	font-family: Helvetica;
+	font-size: 0.8em;
+	padding-left: 20px;
+}
+
+header{grid-area: header;}
+section1{grid-area: section1;}
+section2{grid-area: section2;}
+section3{grid-area: section3;}
+footer{grid-area: footer;}
+
+html{
+	height:100%;
+}
+
+body{
+	height:100%;
+	display: grid;
+	grid-template-rows:5% 40% 40% 10% 5%;
+	grid-template-areas:
+			"header"
+			"section1"
+			"section2"
+			"section3"
+			"footer";
+	align-content: stretch;
+	justify-content: stretch;
+	margin: 0;
+}
+
+header
+{
+	display: grid;
+	align-items:flex-start;
+	justify-content: stretch;
+}
+
+section1{
+	display: grid;
+	align-content: stretch;
+	align-items:flex-start;
+}
+
+section2{
+	display: grid;
+	align-content: stretch;
+	align-items:flex-start;
+}
+
+section3{
+	display: grid;
+	align-content: stretch;
+	align-items:center;
+}
+
+footer
+{
+	display: grid;
+	align-items:flex-end;
+}
+

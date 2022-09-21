@@ -2,31 +2,20 @@ html{
         height: 100%;
         background-color: rgb(240, 240, 240)
 }
-
-header { grid-area: header; }
-.btn { grid-area: btn; }
-.liste{ grid-area: liste; }
-footer { grid-area: footer; }
-
-.container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 70px 50px auto 50px;
-    grid-template-areas:
-                "header"
-                "btn"
-                "liste"
-                "footer";
-    justify-content: stretch;
-}
 header, footer {
     margin: 0;
     background-color: rgb(2, 159, 243);
     color: rgb(255, 255, 255);
     text-indent: 1%;
 }
-h1{
-    margin: 0;
+header{
+    height: 80px;
+    width: 100%;
+    font-weight: bold;
+}
+footer{
+    height: 40px;
+    width: 100%;
 }
 body{
     border: none;
@@ -34,20 +23,25 @@ body{
     padding: 0%;
     height: 100%;
 }
-header{
-    height: 70px;
-    width: 100%;
-}
-footer{
-    height: 50px;
-    width: 100%;
-}
-.objet{
-    background-color: rgb(255, 255, 255);
-    justify-content: space-between;
-}
-.btn{
+.btn { 
+    grid-area: btn;
     display: flex;
+    flex-direction: row;
+}
+.liste{ 
+    grid-area: liste;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    height: 817px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+                "btn"
+                "liste";
+    justify-content: stretch;
 }
 .btnAds{
     background-color: rgb(2, 159, 243);
@@ -57,17 +51,68 @@ footer{
     vertical-align: middle;
     text-align: center;
 }
-.liste{
-    
-}
 .objet{
-    display: grid;
-    grid-template-columns: 25% 65% 15%;
-    grid-template-rows: auto;
-    grid-template-areas:
-                ""
-                "btn"
-                "liste"
-                "footer";
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    width: auto;
     justify-content: stretch;
+    background-color: rgb(255, 255, 255);
+}
+.donnees{
+    display: grid;
+    margin: 5px;
+    width: 100%;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 15% 15% 60% 10%;
+    grid-template-areas:
+                "titre ."
+                "description ."
+                ". ."
+                "temps prix";
+    background-color: rgb(255, 255, 255);
+}
+.titre{
+    grid-area: titre;
+}
+.description{
+    grid-area: description;
+}
+.temps{
+    grid-area: temps;
+}
+.prix{
+    grid-area: prix;
+    text-align: right;
+}
+h1{
+    margin: 0;
+}
+h2{
+    margin: 0;
+}
+p{
+    margin: 0;
+}   
+@media screen and (min-width : 1200px){
+    .liste{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .objet{
+        background-color: rgb(240, 240, 240);
+        flex-direction: column;
+        width : 200px;
+        height: 350px;
+    }
+    html{
+        background-color: rgb(255, 255, 255);
+    }
+    .donnees{
+        height: 150px;
+        width: 200px;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 15% 15% 60% 10%;
+        background-color: rgb(240, 240, 240);
+    }
 }
