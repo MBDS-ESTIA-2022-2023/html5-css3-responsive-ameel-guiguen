@@ -1,0 +1,73 @@
+html{
+        height: 100%;
+        background-color: rgb(240, 240, 240)
+}
+
+header { grid-area: header; }
+.btn { grid-area: btn; }
+.liste{ grid-area: liste; }
+footer { grid-area: footer; }
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 70px 50px auto 50px;
+    grid-template-areas:
+                "header"
+                "btn"
+                "liste"
+                "footer";
+    justify-content: stretch;
+}
+header, footer {
+    margin: 0;
+    background-color: rgb(2, 159, 243);
+    color: rgb(255, 255, 255);
+    text-indent: 1%;
+}
+h1{
+    margin: 0;
+}
+body{
+    border: none;
+    margin: 0;
+    padding: 0%;
+    height: 100%;
+}
+header{
+    height: 70px;
+    width: 100%;
+}
+footer{
+    height: 50px;
+    width: 100%;
+}
+.objet{
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+}
+.btn{
+    display: flex;
+}
+.btnAds{
+    background-color: rgb(2, 159, 243);
+    color: rgb(255, 255, 255);
+    width: 50%;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+.liste{
+    
+}
+.objet{
+    display: grid;
+    grid-template-columns: 25% 65% 15%;
+    grid-template-rows: auto;
+    grid-template-areas:
+                ""
+                "btn"
+                "liste"
+                "footer";
+    justify-content: stretch;
+}

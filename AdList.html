@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <title>Liste d'annonces</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Ad List</h1>
+    </header>
+    <!--utilier class="button-aligne" dans la balise div afin de faire aligner les boutons-->
+    <div class="container">
+        <div class="btn">
+            <div class="btnAds">
+                <p>ALL ADS</p>
+            </div>
+            <div class="btnAds">
+                <p>MY ADS</p>
+            </div>
+        </div>
+        <div class="liste">
+            <div class="objet">
+                <img src="https://img.freepik.com/photos-premium/belle-fleur-cerisier-fleurs-sakura-rose-ciel-bleu-au-printemps_3057-148.jpg?w=1380" alt="photo de fleurs de cerisier avec en fond le ciel bleu" width ="200" height="200">
+                <h2>Title</h2>
+                <p class="description">Description</p>
+                <p class="temps">1 hour ago</p>
+                <p class="prix">$99,00</p>
+            </div>
+            <div class="objet">
+                <img src="https://img.freepik.com/photos-premium/belle-fleur-cerisier-fleurs-sakura-rose-ciel-bleu-au-printemps_3057-148.jpg?w=1380" alt="photo de fleurs de cerisier avec un fond bleu" width="200" height="200">
+                <h2>Title</h2>
+                <p class="description">Description</p>
+                <p class="temps">1 hour ago</p>
+                <p class="prix">$99,00</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>All rights reserved Marianne AMEEL & Killian GUIGUEN</p>
+    </footer>
+</body>
+<!--Le body doit être en display grid, header section footer 3 éléments auxquels on donne le nom (Voir diapo 67)
+Une fois que cela est fait, il suffit de mettre le container, le grid template rows doit être défini pour savoir le nbr de lignes. On peut choisir la taille en pixels de chaque partie.
+Il faut donc définir uniquement le header et le footer en terme de taille, afin qu'on laisse la taille de la section en auto-->
+</html>
